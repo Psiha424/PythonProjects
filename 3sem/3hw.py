@@ -14,33 +14,34 @@
 # Считать, что такой элемент может быть только один. 
 # Если значение k совпадает с этим элементом - выведите его.
 
-# # list_1 = [2, 4, 1, 6, 8, 2, 9, 3, 2]
-# # k = 10
+list_1 = [2, 4, 1, 6, 8, 2, 9, 3, 2]
+k = 10
 
-# # min1 = abs(k - list_1[0])
-# # result = list_1[0]
-# # for i in range(1, len(list_1)):
-# #     if abs(k - list_1[i]) < min1:
-# #         min1 = abs(k - list_1[i])
-# #         result = list_1[i]
-# # print(result)        
+min1 = abs(k - list_1[0])
+result = list_1[0]
+for i in range(1, len(list_1)):
+    if abs(k - list_1[i]) < min1:
+        min1 = abs(k - list_1[i])
+        result = list_1[i]
+print(result)        
 
 
-# dict = { 1:'А, В, Е, И, Н, Н, О, Р, С, Т, A, E, I, O, U, L, N, S, T, R', 2:'Д, К, Л, М, П, У, D, G', 3:'Б, Г, Ё, Ь, Я, B, C, M, P', 4:'Й, Ы, F, H, V, W, Y', 5:'Ж, З, Х, Ц, Ч, K', 8:'Ш, Э, Ю, J, X', 10:'Ф, Щ, Ъ'} 
-# points = 0
-# text = str.upper(input('Введите слово: '))
-# print(text) 
-# for i in text:
-#     for j in dict:
-#         if i in j:
-#             points += dict[i]
-# print(points)
+dict = { 1:'А, В, Е, И, Н, Н, О, Р, С, Т, A, E, I, O, U, L, N, S, T, R', 2:'Д, К, Л, М, П, У, D, G', 3:'Б, Г, Ё, Ь, Я, B, C, M, P', 4:'Й, Ы, F, H, V, W, Y', 5:'Ж, З, Х, Ц, Ч, K', 8:'Ш, Э, Ю, J, X', 10:'Ф, Щ, Ъ'} 
+points = 0
+text = str.upper(input('Введите слово: '))
+print(text) 
+for i in text:
+    for j in dict:
+        if i in j:
+            points += dict[i]
+print(points)
 
 dict = {'L':1,'N':1,'S':1,'T':1,'R':1,'D':2,'G':2,'B':3,'C':3,'M':3,'P':3,'F':4,'H':4,'V':4,'W':4,
 'Y':4,'K':5,'J':8,'X':8,'Q':10,'Z':10,'А':1,'В':1,'Е':1,'И':1,'Н':1,'О':1,'Р':1,'С':1,'Т':1,'Д':2,'К':2,'Л':2,'М':2,'П':2,'У':2,
 'Б':3,'Г':3,'Ё':3,'Ь':3,'Я':3,'Й':4,'Ы':4,'Ж':5,'З':5,'Х':5,'Ц':5,'Ч':5,'Ш':8,'Э':8,'Ю':8,'Ф':10,'Щ':10,'Ъ':10}
 points = 0
 slovo = str.upper(input('Введите слово на английском или русском языке: '))
+
 
 for i in slovo:
     for j in dict:
